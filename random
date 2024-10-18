@@ -1,0 +1,21 @@
+command ---->   ls -al ~/.ssh
+output:
+drwx------  2 jahir-rayhan jahir-rayhan 4096 অক্টোবর   18 15:54 .
+drwxr-x--- 58 jahir-rayhan jahir-rayhan 4096 অক্টোবর   18 15:43 ..
+-rw-------  1 jahir-rayhan jahir-rayhan  432 অক্টোবর    7 15:26 id_ed25519
+-rw-r--r--  1 jahir-rayhan jahir-rayhan  114 অক্টোবর    7 15:26 id_ed25519.pub
+-rw-------  1 jahir-rayhan jahir-rayhan 2610 সেপ্টেম্বর 10 13:29 id_rsa
+-rw-r--r--  1 jahir-rayhan jahir-rayhan  577 সেপ্টেম্বর 10 13:29 id_rsa.pub
+-rw-------  1 jahir-rayhan jahir-rayhan 1120 অক্টোবর   18 15:54 known_hosts
+-rw-r--r--  1 jahir-rayhan jahir-rayhan  284 আগস্ট     21 12:32 known_hosts.old
+
+command --->  
+eval "$(ssh-agent -s)"  
+ssh-add ~/.ssh/id_rsa  
+output:
+Agent pid 51683
+Identity added: /home/jahir-rayhan/.ssh/id_rsa (jahir-rayhan@bedata-004)
+
+command : git remote set-url origin git@github.com:rayhan-28/Native_test.git
+
+command : git push -u origin main
